@@ -42,3 +42,11 @@
 @import "spinners";
 @import "utilities";
 @import "print";
+
+//Memberi warna pada text icon "Stay"
+.brand-text-icon {
+	font-size: 26px;
+	font-weight: 500;
+	font-family: "Poppins", sans-serif;
+	color: $primary;
+}
