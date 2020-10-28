@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import ModuleName from "elements/Button";
+import Header from "parts/Header";
 export default class LandingPage extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+	render() {
+		return (
+			//**<> </> adalah react fragment
+			<>
+				<Header {...this.props}></Header>
+			</>
+		);
+	}
 }
