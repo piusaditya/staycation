@@ -13,7 +13,7 @@ export default function Hero(props) {
 	//* offsetTop dibuat agar saat scroll tidak mepet atasnya
 	function showMostPicked() {
 		window.scrollTo({
-			top: (props.refMostPicked.current.offsetTop = 30),
+			top: props.refMostPicked.current.offsetTop - 30,
 			behavior: "smooth",
 		});
 	}
