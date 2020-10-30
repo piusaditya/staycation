@@ -18,7 +18,7 @@ export default function Number(props) {
 	} = props;
 
 	const [InputValue, setInputValue] = useState(`${prefix}${value}${suffix}`);
-	//fungsi event object mengganti nilai object
+	//fungsi event object mengganti nilai
 	//issuffixplural ngecek if > 1 malam dan menambahkan s
 	const onChange = (e) => {
 		let value = String(e.target.value);
