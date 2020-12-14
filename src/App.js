@@ -1,16 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import "assets/scss/style.scss";
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
+
+import "assets/scss/style.scss";
 
 function App() {
 	return (
 		<div className="App">
 			<Router>
-				<Route path="/" component={LandingPage}></Route>
-				<Route path="/details" component={DetailsPage} />
+				<Route exact path="/" component={LandingPage} />
+				<Route exact path="/properties/:id" component={DetailsPage} />
 			</Router>
 		</div>
 	);

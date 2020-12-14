@@ -5,6 +5,7 @@ import Button from "elements/Button";
 
 import "./index.scss";
 
+//* Don't forget to add space before " active" for showing the (/) in breadcrumb
 export default function Breadcrumb(props) {
 	const className = ["breadcrumb", props.className];
 	return (
@@ -15,7 +16,7 @@ export default function Breadcrumb(props) {
 						<li
 							key={`breadcrumb-${index}`}
 							className={`breadcrumb-item${
-								index === props.data.length - 1 ? "active" : ""
+								index === props.data.length - 1 ? " active" : ""
 							}`}
 						>
 							{index === props.data.length - 1 ? (

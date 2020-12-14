@@ -1,44 +1,33 @@
 import React, { Component } from "react";
+
+import Header from "parts/Header";
 import { InputDate } from "elements/Form";
 import Breadcrumb from "elements/Breadcrumb";
+import PageDetailTitle from "parts/PageDetailTitle";
+import FeaturedImage from "parts/FeaturedImage";
+import ItemDetails from "json/itemDetails.json";
 
 export default class DetailsPage extends Component {
-	state = {
-		value: {
-			startDate: new Date(),
-			endDate: new Date(),
-			key: "selection",
-		},
-	};
+	componentDidMount() {
+		window.title = "Details Page";
+		window.scrollTo(0, 0);
+	}
 
-	handleChange = (e) => {
-		this.setState({ [e.target.name]: e.target.value });
-	};
 	render() {
 		const breadcrumb = [
 			{ pageTitle: "Home", pageHref: "" },
 			{ pageTitle: "House Details", pageHref: "" },
 		];
-		console.log(this.state.value);
+
 		return (
-			<div className="container">
-				<div
-					className="row align-items-center justify-content-center"
-					style={{ height: "100vh" }}
-				>
-					<div className="col-auto">
-						<Breadcrumb data={breadcrumb} />
-					</div>
-					<div className="col-auto">
-						<InputDate
-							max={30}
-							onChange={this.handleChange}
-							name="value"
-							value={this.state.value}
-						/>
-					</div>
-				</div>
-			</div>
+			<>
+				<Header {...this.props}></Header>
+				<PageDetailTitle
+					breadcrumb={breadcrumb}
+					data={ItemDetails}
+				></PageDetailTitle>
+				<FeaturedImage data={ItemDetails.imageUrls}></FeaturedImage>
+			</>
 		);
 	}
 }
