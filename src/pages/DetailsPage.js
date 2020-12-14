@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { InputDate } from "elements/Form";
+import Breadcrumb from "elements/Breadcrumb";
 
 export default class DetailsPage extends Component {
 	state = {
@@ -14,6 +15,10 @@ export default class DetailsPage extends Component {
 		this.setState({ [e.target.name]: e.target.value });
 	};
 	render() {
+		const breadcrumb = [
+			{ pageTitle: "Home", pageHref: "" },
+			{ pageTitle: "House Details", pageHref: "" },
+		];
 		console.log(this.state.value);
 		return (
 			<div className="container">
@@ -21,6 +26,9 @@ export default class DetailsPage extends Component {
 					className="row align-items-center justify-content-center"
 					style={{ height: "100vh" }}
 				>
+					<div className="col-auto">
+						<Breadcrumb data={breadcrumb} />
+					</div>
 					<div className="col-auto">
 						<InputDate
 							max={30}
