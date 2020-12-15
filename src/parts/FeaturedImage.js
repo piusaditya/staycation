@@ -7,6 +7,8 @@ export default function FeaturedImage({ data }) {
 			<div className="container-grid sm">
 				{data.map((item, index) => {
 					return (
+						// buat placement gambarnya
+						// conditional className for picture
 						<div
 							key={`FeaturedImage=${index}`}
 							className={`item ${index > 0 ? "column-5" : "column-7"} ${

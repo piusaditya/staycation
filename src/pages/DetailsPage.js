@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 
 import Header from "parts/Header";
-import { InputDate } from "elements/Form";
-import Breadcrumb from "elements/Breadcrumb";
 import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedImage from "parts/FeaturedImage";
 import ItemDetails from "json/itemDetails.json";
