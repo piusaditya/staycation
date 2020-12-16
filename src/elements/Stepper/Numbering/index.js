@@ -3,14 +3,14 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import propTypes from "prop-types";
-import Number from "elements/Form/InputNumber";
+
+import "./index.scss";
 
 export default function Numbering({ style, className, data, current }) {
 	const KeysOfData = Object.keys(data);
-
 	return (
 		<Fade>
-			<ol className={["stepper", className].join("")} style={style}>
+			<ol className={["stepper", className].join(" ")} style={style}>
 				{KeysOfData.map((list, index) => {
 					let isActive = list === current ? "active" : "";
 					if (index + 1 === KeysOfData.length) {
@@ -19,7 +19,7 @@ export default function Numbering({ style, className, data, current }) {
 					}
 
 					return (
-						<li key={`lisy-${index}`} className={[isActive].join(" ")}>
+						<li key={`list-${index}`} className={[isActive].join(" ")}>
 							{index + 1}
 						</li>
 					);
