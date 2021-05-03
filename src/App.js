@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 
@@ -9,6 +9,10 @@ import Checkout from "pages/Checkout";
 import "assets/scss/style.scss";
 
 function App() {
+	// This effect runs once, after the first render
+	useEffect(() => {
+		document.title = "Staycation";
+	}, []);
 	return (
 		<div className="App">
 			<Router>

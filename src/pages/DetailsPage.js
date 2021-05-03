@@ -21,6 +21,7 @@ class DetailsPage extends Component {
 	componentDidMount() {
 		window.title = "Details Page";
 		window.scrollTo(0, 0);
+		//console.log(this.props.page[this.props.match.params.id].title);
 
 		if (!this.props.page[this.props.match.params.id])
 			this.props.fetchPage(
@@ -37,6 +38,7 @@ class DetailsPage extends Component {
 			{ pageTitle: "Home", pageHref: "" },
 			{ pageTitle: "House Details", pageHref: "" },
 		];
+		document.title = this.props.page[this.props.match.params.id].title;
 
 		return (
 			<>
