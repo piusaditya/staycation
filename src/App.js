@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
@@ -15,6 +16,8 @@ function App() {
 				<Route exact path="/properties/:id" component={DetailsPage} />
 				<Route path="/checkout" component={Checkout} />
 			</Router>
+
+			<ToastContainer></ToastContainer>
 		</div>
 	);
 }
