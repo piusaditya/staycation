@@ -1,3 +1,4 @@
+@import "../../../node_modules/include-media/dist/include-media";
 .container-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -8,11 +9,23 @@
     position: relative;
     z-index: 3;
 
-    &.sm {
-        grid-auto-rows: minmax(245px, auto);
-        row-gap: 10px;
-        column-gap: 10px;
-    }
+    // @include media(">=phone", "<tablet"){
+    //     .container-grid {
+    //         grid-template-columns: 1fr;
+    //         grid-template-rows: 1fr;
+    //      }
+      
+    //     .column-1, .column-2, .column-3, .column-4, .column-5, .column-6 {
+    //       grid-column: auto;
+    //       grid-row: auto;
+    //     }
+    // }
+
+    // &.sm {
+    //     grid-auto-rows: minmax(245px, auto);
+    //     row-gap: 10px;
+    //     column-gap: 10px;
+    // }
 
     .item {
         &.column-1 {

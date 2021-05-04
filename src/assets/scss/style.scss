@@ -45,6 +45,70 @@
 @import "spinners";
 @import "utilities";
 @import "print";
+@import "../../../node_modules/include-media/dist/include-media";
+
+
+
+.App{
+    @include media("<phone"){
+        .hero-image{
+            display: none;
+        }
+        .featured-landing{
+            /* Magic here */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+         }
+      
+        .column-1, .column-2, .column-3, .column-4, .column-5, .column-6 {
+          grid-column: auto;
+          grid-row: auto;
+        }
+    }
+    @include media(">=phone", "<tablet"){
+        
+        .hero-image{
+            display: none;
+        }
+        // .row-card{
+        //     display: flex,
+        //     }
+        .featured-landing{
+            /* Magic here */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        //container-grid dan column pada card landing page
+        .container-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+         }
+      
+        .column-1, .column-2, .column-3, .column-4, .column-5, .column-6 {
+          grid-column: auto;
+          grid-row: auto;
+        }
+    }
+    @include media("<1200px"){
+        .hero-image{
+            display: none;
+        }
+    }
+    @include media(">=tablet", "<desktop"){
+
+    }
+    @include media(">=desktop"){
+        
+    }
+}
+
 
 //Memberi warna pada text icon "Stay"
 .brand-text-icon {

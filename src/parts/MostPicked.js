@@ -20,7 +20,7 @@ export default function MostPicked(props) {
 								className={`item column-4${index === 0 ? " row-2" : " row-1"}`}
 							>
 								<Fade bottom delay={500 * index}>
-									<div className="card card-featured">
+									<div className="card card-featured featured-landing">
 										<div className="tag">
 											${item.price}
 											<span className="font-weight-light">per {item.unit}</span>
