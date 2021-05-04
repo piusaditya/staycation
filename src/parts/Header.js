@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Fade from "react-reveal/Fade";
 
 import Button from "elements/Button";
@@ -10,7 +10,6 @@ export default function Header(props) {
 	const getNavLinkClass = (path) => {
 		return props.location.pathname === path ? " active" : "";
 	};
-	const [click, setClick] = useState(false);
 
 	if (props.isCentered)
 		return (
@@ -21,9 +20,6 @@ export default function Header(props) {
 							<Button className="brand-text-icon mx-auto" href="" type="link">
 								Stay<span className="text-gray-900">cation.</span>
 							</Button>
-							<div className="menu-icon">
-								<i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-							</div>
 						</nav>
 					</div>
 				</header>
