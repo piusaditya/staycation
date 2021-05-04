@@ -21,11 +21,11 @@
     //     }
     // }
 
-    // &.sm {
-    //     grid-auto-rows: minmax(245px, auto);
-    //     row-gap: 10px;
-    //     column-gap: 10px;
-    // }
+    &.sm {
+        grid-auto-rows: minmax(245px, auto);
+        row-gap: 10px;
+        column-gap: 10px;
+    }
 
     .item {
         &.column-1 {
